@@ -28,7 +28,7 @@
             <div class="home-info">
                 <div class="loader">
                     <div class="loader-bar" id="loader-bar"></div>
-                    <p id="load-percent">0%</p>
+                    <p id="load-percent">0% Charged</p>
                 </div>
 
                 <div class="home-text">
@@ -99,170 +99,219 @@
         </section>
 
         <section class="types" id="types">
-            <h1>Types of EV</h1>
-
-            <div class="types-box">
-                <div class="card">
-                    <div class="top">
-                        <img src="images/types/charging.jpg" alt="">
-                    </div>
-
-                    <div class="bottom">
-                        <h3>Battery Electric Vehicle</h3>
-
-                        <p>Runs entirely on electricity stored in rechargeable batteries. BEVs produce zero tailpipe emissions and must be charged using an external power source. They are ideal for environmentally friendly and energy-efficient transportation.</p>
-                    </div>
+            <div class="con">
+                <div class="heading reveal">
+                    <h2>Types of EV</h2>
                 </div>
 
-                <div class="card">
-                    <div class="top">
-                        <img src="images/types/2nd.jpg" alt="">
-                    </div>
+                <div class="types-box">
+                    <article class="card reveal">
+                        <div class="card-front">
+                            <h3>Battery Electric Vehicle (BEV)</h3>
+                            <p>Runs entirely on electricity from a rechargeable battery. Zero tailpipe emissions and the lowest running cost, but it needs charging infrastructure.</p>
+                            <span class="tag">Fully electric</span>
+                        </div>
+                    </article>
 
-                    <div class="bottom">
-                        <h3>Battery Electric Vehicle</h3>
+                    <article class="card reveal">
+                        <div class="card-front">
+                            <h3>Plug-in Hybrid (PHEV)</h3>
+                            <p>Pairs a petrol engine with a larger battery you can plug in. Drive short trips on electricity, and use the engine for long journeys.</p>
+                            <span class="tag">Electric + Petrol</span>
+                        </div>
+                    </article>
 
-                        <p>Runs entirely on electricity stored in rechargeable batteries. BEVs produce zero tailpipe emissions and must be charged using an external power source. They are ideal for environmentally friendly and energy-efficient transportation.</p>
-                    </div>
+                    <article class="card reveal">
+                        <div class="card-front">
+                            <h3>Hybrid Electric Vehicle (HEV)</h3>
+                            <p>Uses a petrol engine and an electric motor together to save fuel. The battery recharges through regenerative braking, so you never plug it in.</p>
+                            <span class="tag">Self-Charging</span>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-front">
+                            <h3>Fuel Cell Vehicle (FCEV)</h3>
+                            <p>Makes electricity onboard from hydrogen. The only emission is water vapour, and refuelling takes minutes, though hydrogen stations are rare.</p>
+                            <span class="tag">Hydrogen</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="sustain" id="sustain">
+            <div class="con">
+                <div class="heading reveal">
+                    <h2>EVs and Sustainable Transportation</h2>
                 </div>
 
-                <div class="card">
-                    <div class="top">
-
+                <div class="sus-grid">
+                    <div class="sus reveal">
+                        <h3>Cleaner cities</h3>
+                        <p>Removing exhaust cuts local smog and noise, improving public health where people live and work.</p>
                     </div>
 
-                    <div class="bottom">
-                        <h3>Hybrid Electric Vehicle</h3>
-
-                        <p>Uses both a petrol engine and an electric motor to improve fuel efficiency. Unlike PHEVs, HEVs do not require external charging because the battery is recharged through regenerative braking while driving.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="top">
-
+                    <div class="sus reveal">
+                        <h3>Renewable power</h3>
+                        <p>EVs run on whatever the grid provides, so they get greener as solar and wind grow.</p>
                     </div>
 
-                    <div class="bottom">
-                        <h3>Fuel Cell Electric Vehicle</h3>
+                    <div class="sus reveal">
+                        <h3>Vehicle-to-grid</h3>
+                        <p>Parked EVs can store surplus clean energy and return it at peak hours, balancing the grid.</p>
+                    </div>
 
-                        <p>Generates electricity from hydrogen fuel cells instead of rechargeable batteries. FCEVs produce only water vapour as emissions and can be refuelled quickly, making them a promising option for clean and sustainable transportation.</p>
+                    <div class="sus reveal">
+                        <h3>Battery Circularity</h3>
+                        <p>Used batteries can power home storage, then be recycled to recover lithium, nickel and cobalt.</p>
+                    </div>
+
+                    <div class="sus reveal">
+                        <h3>Energy Efficiency</h3>
+                        <p>Electric drivetrains convert over 85% of electrical energy into motion, wasting far less power than combustion engines.</p>
+                    </div>
+
+                    <div class="sus reveal">
+                        <h3>Decarbonized Transit</h3>
+                        <p>Electrifying public buses, rail, and commercial fleets scales emission reductions across entire urban transit networks.</p>
+                    </div>
+
+                    <div class="sus reveal">
+                        <h3>Lower Lifetime Footprint</h3>
+                        <p>Over their full lifecycle, EVs produce significantly fewer net greenhouse gas emissions than petrol or diesel vehicles.</p>
+                    </div>
+
+                    <div class="sus reveal">
+                        <h3>Reduced Fossil Dependence</h3>
+                        <p>Transitioning away from petroleum eliminates oil drilling impacts, transport spills, and refinery pollution.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="comparision" id="comparision">
-            <h1>Electric vs Petrol Vehicles</h1>
+            <div class="con">
+                <div class="heading reveal">
+                    <h2>Electric vs Petrol Vehicle</h2>
+                </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Electric</th>
-                        <th>Petrol</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Energy Source</td>
-                        <td><i class="fa-solid fa-check" ></i> Electricity stored in a battery</td>
-                        <td>Petrol burned in an engine</td>
-                    </tr>
+                <div class="table-con reveal">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Electric</th>
+                                <th>Petrol</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Energy Source</td>
+                                <td><i class="fa-solid fa-check" ></i> Electricity stored in a battery</td>
+                                <td>Petrol burned in an engine</td>
+                            </tr>
 
-                    <tr>
-                        <td>Tailpipe emissions</td>
-                        <td><i class="fa-solid fa-check" ></i> Zero tailpipe emissions</td>
-                        <td>CO₂, NOx and particulates</td>
-                    </tr>
+                            <tr>
+                                <td>Tailpipe emissions</td>
+                                <td><i class="fa-solid fa-check" ></i> Zero tailpipe emissions</td>
+                                <td>CO₂, NOx and particulates</td>
+                            </tr>
 
-                    <tr>
-                        <td>Running costs</td>
-                        <td><i class="fa-solid fa-check" ></i> Usually lower per km</td>
-                        <td>Higher, depends on fuel prices</td>
-                    </tr>
+                            <tr>
+                                <td>Running costs</td>
+                                <td><i class="fa-solid fa-check" ></i> Usually lower per km</td>
+                                <td>Higher, depends on fuel prices</td>
+                            </tr>
 
-                    <tr>
-                        <td>Maintenance</td>
-                        <td><i class="fa-solid fa-check" ></i> Fewer moving parts, no oil changes</td>
-                        <td>Regular oil, filter and engine service</td>
-                    </tr>
+                            <tr>
+                                <td>Maintenance</td>
+                                <td><i class="fa-solid fa-check" ></i> Fewer moving parts, no oil changes</td>
+                                <td>Regular oil, filter and engine service</td>
+                            </tr>
 
-                    <tr>
-                        <td>Refuelling / charging</td>
-                        <td>30 min to 8+ hours</td>
-                        <td>About 5 minutes at a pump</td>
-                    </tr>
+                            <tr>
+                                <td>Refuelling / charging</td>
+                                <td>30 min to 8+ hours</td>
+                                <td>About 5 minutes at a pump</td>
+                            </tr>
 
-                    <tr>
-                        <td>About 5 minutes at a pump</td>
-                        <td>Battery production and grid power create emissions</td>
-                        <td>Fuel extraction, refining and burning</td>
-                    </tr>
-                </tbody>
-            </table>
+                            <tr>
+                                <td>About 5 minutes at a pump</td>
+                                <td>Battery production and grid power create emissions</td>
+                                <td>Fuel extraction, refining and burning</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
 
         <section class="faq" id="faq">
-            <h1>Frequently Asked Questions</h1>
-            <div class="faq-container" id="faq-container">
-                <div class="question">
-                    <div class="quiz">
-                        <p>What is an electric Vehicle?</p>
-                        <button><i class="fa-solid fa-chevron-down"></i></button>
-                    </div>
-                    <div class="answer">
-                        <p>A vehicle that uses one or more electric motors, powered by a battery or fuel cell, instead of only a petrol or diesel engine.</p>
-                    </div>
+            <div class="con">
+                <div class="heading reveal">
+                    <h2>Frequently Asked Questions</h2>
                 </div>
+                
+                <div class="faq-container" id="faq-container">
+                    <div class="question reveal">
+                        <button class="quiz" aria-expanded="false">
+                            <span>What is an electric vehicle?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="answer">
+                            <p>A vehicle that uses one or more electric motors, powered by a battery or fuel cell, instead of only a petrol or diesel engine.</p>
+                        </div>
+                    </div>
 
-                <div class="question">
-                    <div class="quiz">
-                        <p>How does an electric car work?</p>
-                        <button><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="question reveal">
+                        <button class="quiz" aria-expanded="false">
+                            <span>How does an electric car work?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="answer">
+                            <p>The battery sends power through electronics that control the motor, and the motor turns the wheels.</p>
+                        </div>
                     </div>
-                    <div class="answer">
-                        <p>The battery sends power through electronics that control the motor, and the motor turns the wheels.</p>
-                    </div>
-                </div>
 
-                <div class="question">
-                    <div class="quiz">
-                        <p>Are electric vehicles completely emission-free?</p>
-                        <button><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="question reveal">
+                        <button class="quiz" aria-expanded="false">
+                            <span>Are electric vehicles completely emission-free?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="answer">
+                            <p>They have no tailpipe emissions, but making the car and battery, and generating electricity, can create emissions.</p>
+                        </div>
                     </div>
-                    <div class="answer">
-                        <p>They have no tailpipe emissions, but making the car and battery, and generating electricity, can create emissions.</p>
-                    </div>
-                </div>
 
-                <div class="question">
-                    <div class="quiz">
-                        <p>How long does EV charging take?</p>
-                        <button><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="question reveal">
+                        <button class="quiz" aria-expanded="false">
+                            <span>How long does EV charging take?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="answer">
+                            <p>Fast chargers can add most of a charge in 30–60 minutes; home charging usually takes 6–10 hours overnight.</p>
+                        </div>
                     </div>
-                    <div class="answer">
-                        <p>Fast chargers can add most of a charge in 30–60 minutes; home charging usually takes 6–10 hours overnight.</p>
-                    </div>
-                </div>
 
-                <div class="question">
-                    <div class="quiz">
-                        <p>Can EVs help reduce pollution?</p>
-                        <button><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="question reveal">
+                        <button class="quiz" aria-expanded="false">
+                            <span>Can EVs help reduce pollution?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="answer">
+                            <p>Yes, they remove exhaust fumes from city streets, and benefits grow as electricity becomes cleaner.</p>
+                        </div>
                     </div>
-                    <div class="answer">
-                        <p>Yes, they remove exhaust fumes from city streets, and benefits grow as electricity becomes cleaner.</p>
-                    </div>
-                </div>
 
-                <div class="question">
-                    <div class="quiz">
-                        <p>WHat is regenerative braking?</p>
-                        <button><i class="fa-solid fa-chevron-down"></i></button>
-                    </div>
-                    <div class="answer">
-                        <p>A system where the motor recovers energy while slowing down and stores it back in the battery.</p>
+                    <div class="question reveal">
+                        <button class="quiz" aria-expanded="false">
+                            <span>What is regenerative braking?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="answer">
+                            <p>A system where the motor recovers energy while slowing down and stores it back in the battery.</p>
+                        </div>
                     </div>
                 </div>
             </div>

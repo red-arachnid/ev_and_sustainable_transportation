@@ -33,11 +33,11 @@ addEventListener('scroll', () => {
 const loadPercentage = document.getElementById('load-percent');
 
 setTimeout(() => {
-    const start = performance.now(), duration = 1200;
+    const start = performance.now(), duration = 1600;
     (function tick(now) {
         const t = Math.min((now - start) / duration, 1);
         const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-        const percent = `${Math.round(eased * 100)}%`;
+        const percent = `${Math.round(eased * 100)}% Charged`;
         loadPercentage.textContent = percent;
         if (t < 1) requestAnimationFrame(tick);
     })(start);
