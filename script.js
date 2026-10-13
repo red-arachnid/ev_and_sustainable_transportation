@@ -1,4 +1,5 @@
 
+//! FAQ BOXES
 const faqBoxes =  [...document.getElementById('faq-container').children];
 
 faqBoxes.forEach(box => {
@@ -16,7 +17,7 @@ function removeActive() {
     faqBoxes.forEach(box => box.classList.remove('active'));
 }
 
-
+//! HEADER PROGRESS BAR
 const header = document.getElementById('header');
 const progress = document.getElementById('progress');
 
@@ -26,3 +27,18 @@ addEventListener('scroll', () => {
     progress.style.width = `${(y / max) * 100}%`;
     header.classList.toggle('scrolled', y > 40);
 }, {passive: true});
+
+
+//! LOADER HOME PAGE
+const loadPercentage = document.getElementById('load-percent');
+
+setTimeout(() => {
+    const start = performance.now(), duration = 1200;
+    (function tick(now) {
+        const t = Math.min((now - start) / duration, 1);
+        const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        const percent = `${Math.round(eased * 100)}%`;
+        loadPercentage.textContent = percent;
+        if (t < 1) requestAnimationFrame(tick);
+    })(start);
+}, 500);

@@ -109,47 +109,63 @@ nav a:active {
     color: var(--color1);
 }
 
-section {
-    background-color: rgb(230, 235, 230);
+.btn {
+    padding: 14px 28px;
+    border-radius: 18px;
+    font-weight: 700;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background-color 0.2s ease;
+}
+.btn.primary {
+    background-color: var(--color6);
+    color: var(--color1);
+}
+.btn.primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(189, 242, 200, 0.2);
+}
+
+@keyframes rise {
+    0% {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 .home {
-    background-image: url('../images/mahindra-ev.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: grayscale(65%);
+    min-height: 100vh;
+    padding: 130px 8vw 90px;
+    color: white;
+    background-color: var(--color1);
 
-    height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 40px;
 
     overflow: hidden;
     position: relative;
 }
 
-.home .cover {
-    z-index: 1;
+.home-bg {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
 
     width: 100%;
     height: 100%;
-    /* background-color: rgba(65, 65, 65, 0.5); */
-    background: linear-gradient(-90deg,rgba(64, 64, 64, 0.8) 0%, rgba(235, 235, 235, 0.2) 100%);;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
-    filter: blur(2px);
+    background: linear-gradient(155deg,rgba(18,53,36,0.2) 10%,rgba(18,53,36,.05) 80%),
+                url('images/mahindra-ev.jpg') center/cover;
 }
 
-.home {
-    padding: 100px 80px;
-
-    display: flex;
-    align-items: end;
-    justify-content: end;
-}
-
-.home .info {
-    z-index: 2;
+.home-info {
+    z-index: 1;
     
     display: flex;
     flex-direction: column;
@@ -157,55 +173,55 @@ section {
     justify-content: center;
 }
 
-.home .overview {
-    padding: 20px 18px;
-    border-radius: 14px;
-    width: 590px;
-
-    display: flex;
-    flex-direction: column;
-
-    transition: background-color 0.2s ease;
+.home-text {
+    z-index: 1;
+    max-width: 600px;
 }
-.home .overview h1 {
-    text-align: justify;
-    margin: 4px 0px;
-    color: white;
-}
-.home .overview p {
-    font-size: 18px;
+.home-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 22px;
     text-align: justify;
     color: white;
-    margin: 4px 0px;
-}
-
-.home .overview:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.home button {
-    margin: 20px 0px;
-    padding: 14px 24px;
-    border-radius: 8px;
-    border: none;
-    background-color: hsl(38, 42%, 87%);
-
-    font-size: 16px;
-    font-weight: bold;
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease,
-                background-color 0.2s ease;
     
-    z-index: 2;
+    animation: rise 0.9s 0.2s both;
 }
-.home button:hover {
-    background-color: hsl(38, 42%, 91%);
-    transform: scale(1.1);
-    box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.4);
+.home-text p {
+    font-size: 19px;
+    text-align: justify;
+    color: #f8f8f8;
+
+    animation: rise 0.9s 0.3s both;
 }
-.home button:active {
-    transform: scale(1);
-    box-shadow: none;
+.home-action {
+    margin-top: 30px;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    animation: rise 1s 0.1s both;
+}
+.loader-bar {
+    background: linear-gradient(90deg, var(--color3), var(--color5));
+    filter: drop-shadow(0 0 8px rgba(189,242,208,.6));
+    height: 6px;
+    border-radius: 12px;
+
+    animation: loader-bar-process 2s 0.6s both;
+}
+.loader p {
+    font-size: 16px;
+    color: white;
+}
+
+@keyframes loader-bar-process {
+    from { width: 0%;}
+    to {width: 100%;}
 }
 
 .about {
