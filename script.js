@@ -42,3 +42,13 @@ setTimeout(() => {
         if (t < 1) requestAnimationFrame(tick);
     })(start);
 }, 500);
+
+//! REVEAL ANIMATION
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+    });
+}, {threshold: 0.15});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));

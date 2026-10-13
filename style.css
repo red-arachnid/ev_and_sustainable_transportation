@@ -5,7 +5,7 @@
     --font-sans: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
     --color1: #123524;
     --color2: #1c4a33;
-    --color3: #53a658;
+    --color3: #458a4a;
     --color4: #53a658;
     --color5: #73bf94;
     --color6: #bdf2d0;
@@ -71,6 +71,7 @@ header {
 }
 header.scrolled {
     background: rgba(18, 53, 36, 0.94);
+    box-shadow: 0px 2px 24px rgba(18, 53, 36, 0.2);
 }
 
 .brand-name {
@@ -124,6 +125,17 @@ nav a:active {
 .btn.primary:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 15px rgba(189, 242, 200, 0.2);
+}
+
+.reveal { 
+    opacity: 0; 
+    transform: translateY(40px); 
+    transition: opacity 1s ease, 
+                transform 1s cubic-bezier(.2,.7,.2,1); 
+}
+.reveal.visible { 
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 @keyframes rise {
@@ -224,59 +236,113 @@ nav a:active {
     to {width: 100%;}
 }
 
+section {
+    padding: 110px;
+}
+.heading {
+    width: 70%;
+    margin-bottom: 56px;
+}
+.heading h2 {
+    font-size: 30px;
+    color: var(--text-color1);
+    margin-bottom: 14px;
+}
+.heading p {
+    color: var(--text-color2);
+    font-size: 18px;
+}
+
+
 .about {
+    background-color: #f7f4ee;
+}
+.about-info {
     display: flex;
     flex-direction: column;
+    gap: 56px;
     align-items: center;
-
-    padding: 60px;
-    padding-top: 120px;
 }
 
-.about h1 {
-    margin: 10px 0px;
-}
-
-.about .info {
-    width: 75%;
-
+.first-row {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
+    justify-content: space-between;
     gap: 60px;
 }
-
-.about .info .left {
-    width: 55%;
-    overflow: hidden;
-    border-radius: 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
-}
-.about .info .left img {
+.second-row {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
-.about .info .right {
-    padding: 20px 26px;
+.about-main h3{
+    font-size: 28px;
+    color: var(--text-color1);
+    margin-bottom: 16px;
+}
+.about-main p {
+    color: var(--text-color2);
+    margin-bottom: 22px;
+}
+.ticks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.stat {
+    background-color: var(--color2);
+    color: white;
+    padding: 26px 22px;
     border-radius: 20px;
-    width: 45%;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
 }
-.about .info .right p {
-    line-height: 32px;
-    color: #666;
-    text-align: justify;
-    font-size: 16px;
-    font-weight: 500;
-    z-index: 1;
+.stat:nth-child(2) {background-color: var(--color3);}
+.stat:nth-child(3) {background-color: var(--color5); color: black;}
+.stat:nth-child(4) {background-color: #f2ebdf; color: black;}
+.stat b {
+    display: block;
+    font-family: var(--font-serif);    
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 8px;
 }
+.stat span {
+    font-size: 14px;
+    line-height: 1.45;
+    display: block;
+    opacity: 0.9;
+}
+
+.bottom-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    border-top: 2px solid var(--color6);
+}
+.bottom-stats div {
+    padding: 28px 24px 0 0;
+}
+.bottom-stats i {
+    font-size: 24px;
+    color: var(--color5);
+    margin-bottom: 12px;
+}
+.bottom-stats h4 {
+    font-size: 17px;
+    color: var(--text-color1);
+    margin-bottom: 4px;
+}
+.bottom-stats p {
+    font-size: 15px;
+    color: var(--text-color2);
+}
+
+
 
 .types {
     display: flex;
