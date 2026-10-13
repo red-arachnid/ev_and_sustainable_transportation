@@ -318,30 +318,33 @@ section {
 }
 
 table {
-    padding: 3px;
-    /* overflow: hidden; */
-    background-color: white;
     border-collapse: collapse;
-    /* border-radius: 18px; */
-
-    width: 60%;
-}
-
-thead {
-    background-color: green;
-    color: white;
-}
-
-tbody {
-}
-
-th {
     text-align: left;
+    padding: 3px;
+    overflow: hidden;
+    border-radius: 16px;
+    width: 70%;
+    max-width: 1100px;
+    background-color: white;
 }
-td, th{
-    padding: 14px 10px;
-    border: 1px solid black;
+
+td{
+    padding: 20px 24px;
+    border-bottom: 1px solid #d0d0d0;
+    font-size: 15px;
+    color: #4a4a4a;
 }
+th {
+    background-color: #1a3c2f;
+    color: white;
+    padding: 20px 24px;
+    font-weight: bold;
+    font-size: 16px;
+}
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
 td i {
     color: darkgreen;
 }
@@ -383,8 +386,9 @@ td i {
     justify-content: space-between;
 }
 .quiz p {
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
+    user-select: none;
 }
 .quiz button {
     font-size: 18px;
@@ -396,10 +400,22 @@ td i {
     border: none;
     background-color: transparent;
 }
+.quiz button i {
+    transition: transform 0.2s ease-in-out;
+}
 
+.answer {
+    display: none;
+}
 .question .answer p {
     margin-top: 20px;
     font-size: 18px;
     color: #333;
 }
 
+.question.active .answer {
+    display: block;
+}
+.question.active i {
+    transform: rotate(180deg);
+}
